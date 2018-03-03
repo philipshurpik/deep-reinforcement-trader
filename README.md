@@ -1,4 +1,4 @@
-# Simple crypto trading using Reinforcement Learning
+### Simple crypto trading using Reinforcement Learning
 
 I used DDPG approach:
 https://arxiv.org/pdf/1509.02971v5.pdf
@@ -9,10 +9,10 @@ https://github.com/yanpanlau/DDPG-Keras-Torcs
 
 Also while trying I tried simple Policy Gradient with deterministic actions but it not worked well
 
-# The main problem:
+### The main problem:
 Currently it converges to 1 strange case - to make only long positions each test run - so actually converges to something like buy and hold strategy
 
-# Ideas how to fix it:
+### Ideas how to fix it:
 * Using classical indicators from TA-lib - like moving average 
 * Try different type type of activations:  
 1) sigmoid - [0..1] - position size
