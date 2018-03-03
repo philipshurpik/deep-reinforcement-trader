@@ -5,13 +5,12 @@ https://arxiv.org/pdf/1509.02971v5.pdf
 
 DDPG implementation was adapted from this repo:
 https://github.com/yanpanlau/DDPG-Keras-Torcs
++ Some ideas and loading datasets from PGPortfolio project
 
 Also while trying I tried simple Policy Gradient with deterministic actions but it not worked well
 
 # The main problem:
-It converges to 1 strange case - to make only 1 long position each run.
-(or sometimes it can not converge making shorts)
-
+Currently it converges to 1 strange case - to make only long positions each test run - so actually converges to something like buy and hold strategy
 
 # Ideas how to fix it:
 * Using classical indicators from TA-lib - like moving average 
