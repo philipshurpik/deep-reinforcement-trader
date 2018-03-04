@@ -11,7 +11,7 @@ Also while trying I tried simple Policy Gradient with deterministic actions but 
 
 ### The main problem:
 Currently it converges to 1 strange case - to make only long positions each test run - so actually converges to something like buy and hold strategy  
-[[https://github.com/philipshurpik/repository/blob/master/stats/test_stats_graph.png|alt=test_stats_graph]]
+[[https://github.com/philipshurpik/deep-reinforcement-trader/blob/master/stats/test_stats_graph.png|alt=test_stats_graph]]
 
 
 ### Ideas how to fix it:
