@@ -11,8 +11,7 @@ Also while trying I tried simple Policy Gradient with deterministic actions but 
 
 ### The main problem:
 Currently it converges to 1 strange case - to make only long positions each test run - so actually converges to something like buy and hold strategy  
-[[https://github.com/philipshurpik/deep-reinforcement-trader/blob/master/stats/test_stats_graph.png|alt=test_stats_graph]]
-
+![Alt text](stats/test_stats_graph.png?raw=true "Test stats graph")
 
 ### Ideas how to fix it:
 * Using classical indicators from TA-lib - like moving average:  
