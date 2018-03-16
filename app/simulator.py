@@ -46,7 +46,7 @@ class Simulator(object):
         return reversed_window.reshape(-1, self.features_number, self.window_size, 1)
 
     def _get_start_end_index(self, train_mode=True):
-        train_index = np.random.randint(self.window_size + 7800, self.window_size + 8500)
+        train_index = 0#np.random.randint(self.window_size, self.train_end_index - self.episode_duration - 1)
         test_index = np.random.randint(self.train_end_index + self.window_size, self.count - self.episode_duration - 1)
         start_index = train_index if train_mode else test_index
         end_index = start_index + self.episode_duration
@@ -64,3 +64,8 @@ class Simulator(object):
             self.step_number += 1
             self.current_index += 1
         return self._get_current_window(), done
+
+    def get_episode_values(self):
+        time = self.data.index[self.start_index: self.end_index].to_pydatetime().reshape(-1,1)
+        values = self.data.values[self.start_index:self.end_index, 1:]
+        return np.concatenate((time, values), axis=1)

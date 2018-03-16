@@ -7,6 +7,7 @@ from gym import spaces
 
 from .simulator import Simulator
 from .stats import Stats
+from .renderer import render
 
 """
 we can have 3 environment versions:
@@ -225,3 +226,6 @@ class MarketEnv(gym.Env):
         stats = self.train_stats if self.train_mode else self.test_stats
         stats.add(self.actual_reward, buy_hold_value, self.max_draw_down, epsilon, len(self.journal))
         stats.print_latest()
+
+    def render(self, mode='human'):
+        render(self.simulator.get_episode_values())
